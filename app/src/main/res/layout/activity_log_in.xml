@@ -12,28 +12,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:text="@string/log_in"
         android:textSize="35dp"
-        app:layout_constraintBottom_toTopOf="@id/llEnter"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/llEnter"
+    <RelativeLayout
+        android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/tvForget"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/llRegister"
         app:layout_constraintTop_toBottomOf="@id/tvHeader">
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/edit_text_background"
             android:hint="@string/email" />
 
@@ -41,118 +39,109 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_below="@id/etEmail"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/edit_text_background"
             android:hint="@string/password" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvForget"
-        style="@style/Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="@string/forget_password"
-        app:layout_constraintBottom_toTopOf="@id/llRemember"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llEnter" />
-
-    <LinearLayout
-        android:id="@+id/llRemember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toTopOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvForget">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/check_box_background" />
 
         <TextView
+            android:id="@+id/tvForget"
             style="@style/Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/remember" />
+            android:layout_below="@id/etPassword"
+            android:layout_alignEnd="@id/etPassword"
+            android:layout_marginBottom="15dp"
+            android:text="@string/forget_password" />
 
-    </LinearLayout>
-
-    <android.widget.Button
-        android:id="@+id/btnLogin"
-        style="@style/Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="5dp"
-        android:text="@string/login"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/tvOr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llRemember" />
-
-    <TextView
-        android:id="@+id/tvOr"
-        style="@style/Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/or"
-        app:layout_constraintBottom_toTopOf="@id/llAnother"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
-
-    <LinearLayout
-        android:id="@+id/llAnother"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintBottom_toTopOf="@id/llRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvOr">
-
-        <android.widget.Button
-            android:id="@+id/btnGoogle"
-            style="@style/Button"
+        <LinearLayout
+            android:id="@+id/llRemember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:text="@string/google"
-            app:layout_constraintBottom_toTopOf="@id/tvOr"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llRemember" />
+            android:layout_below="@id/tvForget"
+            android:layout_marginBottom="15dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/check_box_background" />
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember" />
+
+        </LinearLayout>
 
         <android.widget.Button
-            android:id="@+id/btnFacebook"
+            android:id="@+id/btnLogin"
             style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llRemember"
+            android:layout_marginVertical="5dp"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOr"
+            style="@style/Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:text="@string/facebook"
-            app:layout_constraintBottom_toTopOf="@id/tvOr"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llRemember" />
+            android:layout_below="@id/btnLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="15dp"
+            android:text="@string/or" />
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llAnother"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOr">
+
+            <android.widget.Button
+                android:id="@+id/btnGoogle"
+                style="@style/Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="@string/google"
+                app:layout_constraintBottom_toTopOf="@id/tvOr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llRemember" />
+
+            <android.widget.Button
+                android:id="@+id/btnFacebook"
+                style="@style/Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="@string/facebook"
+                app:layout_constraintBottom_toTopOf="@id/tvOr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llRemember" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/llRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llAnother">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tvNotAccount"
