@@ -138,6 +138,7 @@
             android:id="@+id/tvNotAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10px"
             android:text="@string/not_account"
             android:textSize="20dp" />
 

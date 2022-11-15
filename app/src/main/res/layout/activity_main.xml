@@ -43,7 +43,7 @@
         android:id="@+id/llDeveloper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -52,6 +52,7 @@
             android:id="@+id/tvProductOf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10px"
             android:text="@string/product_of"
             android:textSize="15dp" />
 
