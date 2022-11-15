@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">AdaptiveMaket</string>
+    <string name="app_name">Adaptive Maket</string>
     <string name="splash_text">Lorem Ipsum is simply dummy text</string>
     <string name="product_of">Product of</string>
     <string name="developer">Dmitry Sergeev</string>
     <string name="log_in">Log In</string>
     <string name="login">Login</string>
-    <string name="email">Enter email or phone number</string>
+    <string name="email">Enter Email / Phone Number</string>
     <string name="password">Password</string>
-    <string name="forget_password">forget Password</string>
+    <string name="forget_password">Forget Password?</string>
     <string name="remember">Remember Password</string>
     <string name="or">OR</string>
     <string name="google">Google</string>

@@ -8,73 +8,87 @@
 
     <TextView
         android:id="@+id/tvHeader"
+        style="@style/Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="@string/log_in"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toTopOf="@id/llEnter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etEmail"
+    <LinearLayout
+        android:id="@+id/llEnter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/email"
-        app:layout_constraintBottom_toTopOf="@id/etPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvHeader" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/tvForget"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@id/tvHeader">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/email" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/password" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvForget"
+        style="@style/Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/forget_password"
-        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@id/llRemember"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llEnter" />
 
     <LinearLayout
         android:id="@+id/llRemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toTopOf="@id/btnLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvForget">
 
         <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/check_box_background" />
 
         <TextView
+            style="@style/Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="@string/remember"
-            android:textSize="20dp" />
+            android:text="@string/remember" />
 
     </LinearLayout>
 
     <android.widget.Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        style="@style/Button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="5dp"
         android:text="@string/login"
         android:textAllCaps="false"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tvOr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,11 +96,10 @@
 
     <TextView
         android:id="@+id/tvOr"
+        style="@style/Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:text="@string/or"
-        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@id/llAnother"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +109,7 @@
         android:id="@+id/llAnother"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toTopOf="@id/llRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,8 +117,11 @@
 
         <android.widget.Button
             android:id="@+id/btnGoogle"
+            style="@style/Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:text="@string/google"
             app:layout_constraintBottom_toTopOf="@id/tvOr"
@@ -114,8 +131,11 @@
 
         <android.widget.Button
             android:id="@+id/btnFacebook"
+            style="@style/Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:text="@string/facebook"
             app:layout_constraintBottom_toTopOf="@id/tvOr"
@@ -136,18 +156,18 @@
 
         <TextView
             android:id="@+id/tvNotAccount"
+            style="@style/Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10px"
-            android:text="@string/not_account"
-            android:textSize="20dp" />
+            android:layout_marginEnd="15px"
+            android:text="@string/not_account" />
 
         <TextView
             android:id="@+id/tvReg"
+            style="@style/Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register"
-            android:textSize="20dp"
             android:textStyle="bold" />
     </LinearLayout>
 

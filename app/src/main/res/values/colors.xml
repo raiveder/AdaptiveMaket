@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="papayaWhip">#ffefd5</color>
-    <color name="navajoWhite">#ffdead</color>
+    <color name="papayaWhip">#ef9300</color>
+    <color name="papayaWhip50">#ffcb77</color>
+    <color name="papayaWhip75">#ffefd5</color>
 </resources>
