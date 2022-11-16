@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/btnLogin"
+        app:layout_constraintBottom_toTopOf="@id/btnStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +42,7 @@
     </LinearLayout>
 
     <android.widget.Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnStart"
         style="@style/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

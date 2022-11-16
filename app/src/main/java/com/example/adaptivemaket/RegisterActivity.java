@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
         EditText etPassword = findViewById(R.id.etPassword);
         EditText etConfirmPassword = findViewById(R.id.etConfirmPassword);
         Button btn = findViewById(R.id.btnRegister);
-        TextView textView = findViewById(R.id.tvReg);
+        TextView textView = findViewById(R.id.tvLogin);
 
         etFullName.addTextChangedListener(getTextWatcher(etFullName, etEmail,
                 etPassword, etConfirmPassword, btn));
@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         textView.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this,
                 LogIn.class)));
 
-        textView.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this,
+        btn.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this,
                 CreateAccount.class)));
     }
 
