@@ -14,4 +14,11 @@
     <string name="facebook">Facebook</string>
     <string name="not_account">Don\'t have a account? Let\'s</string>
     <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="conditions">I agree with terms &amp; conditions</string>
+    <string name="already_register">Already Registered? Let\'s</string>
+    <string name="congrats">Congrats</string>
+    <string name="created">Account Created\nSuccessfully</string>
+    <string name="start">Get Started</string>
 </resources>
